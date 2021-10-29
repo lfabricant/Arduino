@@ -75,30 +75,6 @@ void setup() {
 }
 
 void loop() {
-  // RUN ULTRASONIC LOOP
-//  servo.write(45);
-//  delay(1000);
-//  distance[0] = getSonar();   //get ultrsonice value and save it into distance[0]
-//
-//  servo.write(90);
-//  delay(1000);
-//  distance[1] = getSonar();
-//
-//  servo.write(135);
-//  delay(1000);
-//  distance[2] = getSonar();
-//
-//  servo.write(90);
-//  delay(1000);
-//  distance[3] = getSonar();
-//  
-//  Serial.print("Distance L / M / R / M2:   ");  //Left/Middle/Right/Middle2
-//  for (int i = 0; i < 4; i++) {
-//    Serial.print(distance[i]);     //print ultrasonic in 45°, 90°, 135°, 90°
-//    Serial.print("/");
-//  }
-//  Serial.print('\n');  //next content will be printed in new line
-//  //
   
   if (irrecv.decode(&results)){ // if there is something to decode (if you get a signal - will pause IR receiver)
     isStopFromIR = false;
@@ -168,17 +144,6 @@ void loop() {
     //ultrasonic_loop();
     
   } 
-//  else {
-//    if(millis()-lastIRUpdateTime > IR_UPDATE_TIMEOUT) {
-//      if(!isStopFromIR){
-//        isStopFromIR = true;
-//        motorRun(0,0);
-//        ultrasonic_loop();
-//      }
-//      lastIRUpdateTime = millis();
-//    }
-//   // ultrasonic_loop();
-//  }
   
 }
 
